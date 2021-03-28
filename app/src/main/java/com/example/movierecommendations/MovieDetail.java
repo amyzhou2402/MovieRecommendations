@@ -29,6 +29,7 @@ public class MovieDetail extends AppCompatActivity {
     private TextView rating;
     private RatingBar ratingBar;
     private Button searchTrailer;
+    private TextView genre;
     private TextView description;
     private TextView releaseYear;
     private ImageView image;
@@ -48,6 +49,7 @@ public class MovieDetail extends AppCompatActivity {
         movieNameBig = findViewById(R.id.tvMovieNameBig);
         rating = findViewById(R.id.tvRating);
         ratingBar = findViewById(R.id.ratingBar);
+        genre = findViewById(R.id.tvGenre);
         description = findViewById(R.id.tvDescription);
         releaseYear = findViewById(R.id.tvReleaseYear);
         image = findViewById(R.id.ivImage);
@@ -58,7 +60,8 @@ public class MovieDetail extends AppCompatActivity {
         rating.setText(String.valueOf(movie.getRating()));
         description.setText(movie.getDescription());
         releaseYear.setText(String.valueOf(movie.getReleaseYear()));
-//        ratingBar.setNumStars(movie.getRating());
+        ratingBar.setRating(movie.getRating());
+        genre.setText(movie.getGenre());
 
         //method to have button link to movie trailer
         searchTrailer = findViewById(R.id.btSearchTrailer);

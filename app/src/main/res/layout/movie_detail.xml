@@ -30,9 +30,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="323dp"
-        android:layout_height="299dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="322dp"
+        android:layout_height="373dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView">
 
@@ -51,7 +51,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="Movie Description"
-            app:layout_constraintTop_toBottomOf="@+id/tvRating" />
+            app:layout_constraintStart_toStartOf="@+id/tvGenreDesc"
+            app:layout_constraintTop_toBottomOf="@+id/tvGenreDesc" />
 
         <TextView
             android:id="@+id/tvRating"
@@ -96,10 +97,10 @@
 
         <TextView
             android:id="@+id/tvDescription"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="156dp"
+            android:layout_height="132dp"
             android:text="TextView"
-            app:layout_constraintStart_toStartOf="@+id/tvRating"
+            app:layout_constraintStart_toStartOf="@+id/tvGenre"
             app:layout_constraintTop_toTopOf="@+id/tvDescriptionDesc" />
 
         <Button
@@ -110,6 +111,23 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvGenreDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Genre"
+            app:layout_constraintStart_toStartOf="@+id/tvRatingDesc"
+            app:layout_constraintTop_toBottomOf="@+id/tvRatingDesc" />
+
+        <TextView
+            android:id="@+id/tvGenre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="@+id/tvRating"
+            app:layout_constraintTop_toTopOf="@+id/tvGenreDesc" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
